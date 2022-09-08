@@ -1,5 +1,3 @@
-from pyexpat import model
-from statistics import mode
 from django.db import models
 
 # Create your models here.
@@ -7,6 +5,7 @@ from django.db import models
 
 class Post(models.Model):
     title = models.TextField()
+    # ForeignKey - allows many to one relation - one author can post may blog
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     body = models.TextField()
 
