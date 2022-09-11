@@ -7,10 +7,9 @@
     <img src="{% static 'images/iphone.jpg/'%}" alt="iphone">
     {% if user.is_authenticated %}
         <p>Hi {{ user.username }}!</p>
-        <p><a href="{% url 'logout' %}">Log Out</a></p>
+
     {% else %}
         <p>You are not logged in</p>
-        <a href="{% url 'login' %}">Log In</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
+
     {% endif %}
 {% endblock content %}
